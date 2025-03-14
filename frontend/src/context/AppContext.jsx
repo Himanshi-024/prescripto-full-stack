@@ -30,7 +30,7 @@ const AppContextProvider = (props) => {
             toast.error(error.message)
         }
 
-    }
+    },
 
     // Getting User Profile using API
     const loadUserProfileData = async () => {
@@ -50,17 +50,17 @@ const AppContextProvider = (props) => {
             toast.error(error.message)
         }
 
-    }
+    },
 
     useEffect(() => {
         getDoctosData()
-    }, [])
+    }, []),
 
     useEffect(() => {
         if (token) {
             loadUserProfileData()
         }
-    }, [token])
+    }, [token]),
 
     const value = {
         doctors, getDoctosData,
@@ -68,7 +68,7 @@ const AppContextProvider = (props) => {
         backendUrl,
         token, setToken,
         userData, setUserData, loadUserProfileData
-    }
+    },
 
     return (
         <AppContext.Provider value={value}>
