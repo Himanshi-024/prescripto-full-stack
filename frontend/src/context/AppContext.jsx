@@ -6,12 +6,12 @@ export const AppContext = createContext()
 
 const AppContextProvider = (props) => {
 
-    const currencySymbol = '₹'
-    const backendUrl = https://prescripto-full-stack-backend-2tf7.onrender.com
+    const currencySymbol = '₹',
+    const backendUrl = https://prescripto-full-stack-backend-2tf7.onrender.com,
 
-    const [doctors, setDoctors] = useState([])
-    const [token, setToken] = useState(localStorage.getItem('token') ? localStorage.getItem('token') : '')
-    const [userData, setUserData] = useState(false)
+    const [doctors, setDoctors] = useState([]),
+    const [token, setToken] = useState(localStorage.getItem('token') ? localStorage.getItem('token') : ''),
+    const [userData, setUserData] = useState(false),
 
     // Getting Doctors using API
     const getDoctosData = async () => {
